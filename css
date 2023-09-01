@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kumpulan Latihan CSS - Modul 3 </title>
+</head>
+<body>
+    <style media="screen">
+        div{
+            width: 80%;
+            margin: 0 auto;
+            height: 100px;
+        }
+        .bgcolor{ background-color: #ff4533; }
+        .bgimage{ background-image: url("batako.jpeg"); }
+        .bgposition{
+            height: 350px;
+           background-color: lightcoral;
+        }
+        .gradient1{ background: linear-gradient(to right, purple, pink, lightblue); }
+        .gradient2{ background: linear-gradient(rgb(245, 96, 96), rgb(243, 243, 97), rgb(90, 133, 90), rgb(110, 110, 228));}
+
+         /* Style CSS untuk latihan B */
+
+        body{ background-color: #edf1f3;
+        }
+        div.container{
+            margin: 0 auto;
+            width: 90%;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: #820215;
+        }
+        nav{
+            width: 20%;
+            height: 800px;
+            background: #002f42;
+            float: left;
+        }
+        div.content{
+            width: 80%;
+            height: 800px;
+            background: #e8e4e4;
+            float: right;
+        }
+        footer{
+            width: 100%;
+            height: 50px;
+            background: #81cccc;
+        }
+
+        /* Style CSS untuk latihan C */
+
+        .maroon{ color: #820004; }
+        .navy { color: #05004c; }
+        .indigo { color #5D76CB; }
+        .spacing{ letter-spacing: 2px; word-spacing: 5px; line-height: 20px;}
+
+        .uppercase{ text-transform: uppercase; }
+        .lowercase{ text-transform: lowercase; }
+        .capitalize{ text-transform: capitalize; }
+        .paragraf{
+            font-family: "Courier New";
+            font-size: 20px;
+        }
+        ul[
+            list-style-type:circle;
+        ]
+        li{
+            font-family: "Tahoma";
+            font-size: 15px;
+        }
+
+        /* Style CSS untuk latihan D */
+
+        .btn-red{ padding:10px; background: #fc0202; color:#fff;}
+    .btn-blue{ padding:10px; background: #02496d; color:#fff;}
+    .btn-green{ padding:10px; background: #338401; color:#fff;}
+    .solid{
+      border-style: solid; border-width: 4px; border-color: #000;
+    }
+    .dotted{
+      border-style: dotted; border-width: 4px; border-color: #000;
+    }
+    .double{
+      border-style: double; border-width: 4px; border-color: #000;
+    }
+    .ridge{
+      border-style: ridge; border-width: 4px;
+    }
+    .inset{
+      border-style: inset; border-width: 4px;
+    }
+    .outset{
+      border-style: outset; border-width: 4px;
+    }
+    .round{
+      border-radius:20px;
+    }
+
+     /* Style CSS untuk latihan E */
+
+     .container{
+        width:50%;
+        height: 200px;
+        overflow: auto;
+        margin-left: :0 auto;
+      }
+      .static{ position: static; border: 2px solid green; }
+      .relative{
+        position: relative;
+        border: 2px solid red;
+        left: 20px; /* jarak dari posisi paling kiri sebesar 20px */
+        bottom: 0; /* jarak dari posisi paling bawah sebesar 0px */
+      }
+      .absolute{ position: absolute; border: 3px solid rgb(20, 15, 167); left: 20px; bottom: 40px; }
+      .fixed{ position: fixed; border: 2px solid black; bottom: 0; right: 0; }
+      .sticky{
+        position: sticky;
+        border: 2px solid yellow;
+        top:0;
+        left:20px;
+        background: darkblue;
+        color:white;
+      }
+
+      /* Style CSS untuk latihan F */
+
+      .menu{ margin:0; width:100%; position:sticky; }
+    nav{ width: 20%; height: 400px; background:#e2e0e0;}
+    ul.horizontal{
+      list-style-type:none;
+      padding: 0;
+      margin: 0;
+      overflow:hidden;
+      background-color: #d10202;
+    }
+    ul.horizontal li { float: left; }
+    ul.horizontal li a{
+      display: block;
+      text-decoration: none;
+      color:white;
+      padding: 15px;
+      text-align:center;
+    }
+    ul.horizontal li a:hover{ background-color: #6b0101; }
+    ul.vertical{
+      list-style-type:none;
+      padding:0;
+      margin:0;
+      overflow:hidden;
+      background-color:#e2e0e0;
+    }
+    ul.vertical li a{
+      display:block;
+      text-decoration:none;
+      color:black;
+      padding:15px;
+      text-align:left;
+    }
+    ul.vertical li a:hover{
+      background-color: #777777;
+      color:white;
+    }
+    
+    /* Style CSS untuk latihan G */
+
+    div.news{
+        margin: 0 auto;
+        width: 70%;
+      height:300px;
+      column-count:2;
+      column-gap: 30px;
+      column-rule-style: solid;
+      column-rule-width: 2px;
+      column-rule-color: #000;
+    }
+
+    /* Style CSS untuk latihan H */
+    div.box{
+      display:inline-block;
+      width:200px;
+      float:left;
+      border: 2px solid #ddd;
+      margin: 10px;
+    }
+    div.box img{
+      width:100%;
+      height: 250px;
+    }
+    div.box:hover{
+      border: 3px solid #000;
+    }
+    div.box div.deskripsi{
+      padding:15px;
+      text-align:center;
+    }
+
+      /* Style CSS untuk latihan  J*/
+
+      *{
+    box-sizing: border-box;
+}
+
+
+[class*="col-"] { float: left; padding: 15px; }
+
+
+/* For Smartphone */
+[class*="col-"] { width: 100%; }
+
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+
+}
+
+
+.bg-green{ background: #00510c; color:white; }
+.bg-blue{ background: #012051; color:white; }
+.bg-red{ background: #50011a; color:white; }
+
+/* Style CSS untuk latihan  K*/
+
+div.article{
+        width:80%;
+        margin:0 auto;
+        column-count:3; column-gap: 30px;
+        column-rule-style: solid;
+        column-rule-width: 2px;
+        column-rule-color: #000;
+        background: #012051;
+        color:#fff; padding:10px;
+      }
+      @media only screen and (max-width:768px){
+        div.article{
+          width:80%;
+          margin:0 auto;
+          column-count:2; column-gap: 30px;
+          column-rule-style: solid;
+          column-rule-width: 2px;
+          column-rule-color: #000;
+          background:#50011a;
+          color:#fff; padding:10px;
+        }
+      }
+      @media only screen and (max-width:600px){
+        div.article{
+          width:80%;
+          margin:0 auto;
+          column-count:1; column-gap: 30px;
+          column-rule-style: solid;
+          column-rule-width: 2px;
+          column-rule-color: #000;
+          background:#00510c;
+          color:#fff;
+          padding:10px;
+        }
+      }
+
+      /* Style CSS untuk latihan  L*/
+      *{
+        box-sizing:border-box;
+      }
+      [class*="col-"]{
+        padding: 15px; float:left; width: 100%;
+      }
+
+
+      @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+      }
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+      }
+
+
+      .image{
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        margin:0 auto;
+        border: 20px double darkgrey;
+      }
+      .container{
+        width:80%;
+        margin:0 auto;
+      }
+      .box{
+        text-align:center;
+      }
+
+       /* Style CSS untuk latihan  M*/
+       * {
+        box-sizing:border-box;
+      }
+      [class*="col-"]{
+        padding: 15px; float:left; width: 100%;
+      }
+      .header{
+        background: url("../logo_white.png") #5e0001 no-repeat center;
+        background-size: 100px 100px;
+        height: 200px;
+      }
+
+
+      @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+        .header{
+          background: url("../logo_putih.png") #5e0001 no-repeat center;
+          height: 200px;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        .header{
+          background: url("../logo_putih.png") #5e0001 no-repeat center;
+          height: 200px;
+        }
+      }
+      .container{
+        width:80%;
+        margin:0 auto;
+      }
+
+
+      .sidebar ul{
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background: red;
+      }
+      .sidebar ul li{
+        float: left;
+        width: 100%;
+        border-bottom: 2px solid #5e0001;
+      }
+      .sidebar ul li a{
+        display: block;
+        text-decoration: none;
+        color:#fff;
+        padding: 15px;
+        text-align: left;
+      }
+
+
+      .content{ text-align:justify; }
+      .footer{
+        background: #5e0001;
+        color: #fff;
+
+
+      }
+        /* Style CSS untuk latihan  N*/
+
+        *{
+        box-sizing:border-box;
+      }
+      [class*="col-"]{
+        padding: 5px; float:left; width: 100%;
+      }
+
+
+      @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+      }
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+      }
+      .container{
+        width:80%;
+        margin:0 auto;
+      }
+      .label{
+        font-size:15px;
+      }
+      .form-control{
+        padding:20px;
+        font-size:15px;
+        width:100%;
+        height:30px;
+        border: 1px solid grey;
+        border-radius:10px;
+      }
+      .button{
+        float:right;
+        background: darkblue; color:#fff;
+        padding:10px;
+        border:1px solid darkblue;
+        border-radius:10px;
+        font-weight:bolder; letter-spacing:1px;
+      }
+      fieldset{
+        border-radius:10px;
+      }
+      fieldset legend{
+        font-weight:bolder;
+      }
+
+
+    </style>
+
+    <h2>A. Latihan CSS Background</h2>
+    <div class="bgcolor">
+        <h1 align="center"> Background Color</h1>
+    </div>
+
+    <div class="bgimage">
+        <h1 align="center"> Background Image</h1>
+    </div>
+
+    <div class="bgposition">
+        <h1 align="center"> Background Position</h1>
+    </div>
+
+    <div class="gradient1">
+        <h1 align="center">Gradient Background</h1>
+    </div>
+
+    <div class="gradient2">
+        <h1 align="center">Gradient Background</h1>
+    </div>
+<br>
+    <h2>B. Latihan CSS Dimension</h2>
+
+    <div class="container">
+        <header>
+            <h1 align="center">Web Header</h1>
+        </header>
+        <nav>
+            <h1 align="center">Navigasi Pane</h1>
+        </nav>
+        <div class="content">
+            <h4 align="center">Content Web</h4>
+        </div>
+        <footer>
+            <h1 align="center">Web Footer</h1>
+        </footer>
+    </div>
+    
+<br>
+    <h2>C. Latihan CSS Text</h2>
+
+    <fieldset>
+        <legend>Text Color</legend>
+        <p class="maroon">Ini warna maroon</p>
+        <p class="navy">Ini warna navy</p>
+        <p class="indigo">Ini warna indigo</p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Spacing</legend>
+        <p class="spacing">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop    
+        </p>
+    </fieldset>
+
+    
+
+    <fieldset>
+        <legend>Transform</legend>
+        <p class="uppercase">ini adalah contoh transform uppercase.</p>
+        <p class="lowercase">ini adalah contoh transform lowercase.</p>
+        <p class="capitalize">ini adalah contoh transform capitalized.</p>
+      </fieldset>
+  
+  
+      <fieldset>
+        <legend>Font Style</legend>
+        <p class="paragraf">
+          CSS dapat mengatur style dari teks yang ada pada halaman web yang dibuat.
+          Terdapat beberapa property yang dapat digunakan untuk mengatur style teks yaitu sebagai berikut.
+          <ul>
+            <li>text-align: digunakan untuk mengatur perataan teks, value yang dapat digunakan yaitu left, center, right.</li>
+            <li>color: digunakan untuk memberikan warna pada teks.</li>
+            <li>letter-spacing: mengatur jarak antar karakter.</li>
+            <li>word-spacing: mengatur jarak antar kata.</li>
+          </ul>
+        </p>
+      </fieldset>
+  
+      <h2>D. Latihan CSS Border</h2>
+
+      <fieldset>
+        <legend>Border Style</legend>
+        <p class="btn-red solid"><b>Solid</b></p>
+        <p class="btn-blue dotted"><b>Dotted</b></p>
+        <p class="btn-green ridge"><b>Ridge</b></p>
+        <p class="btn-red double"><b>Double</b></p>
+        <p class="btn-blue inset"><b>Inset</b></p>
+        <p class="btn-green outset"><b>Outset</b></p>
+      </fieldset>
+  
+  
+      <fieldset class="round">
+        <legend>Round Border</legend>
+        <p class="btn-red solid round"><b>Solid</b></p>
+        <p class="btn-blue dotted round"><b>Dotted</b></p>
+        <p class="btn-green ridge round"><b>Ridge</b></p>
+        <p class="btn-red double round"><b>Double</b></p>
+        <p class="btn-blue inset round"><b>Inset</b></p>
+        <p class="btn-green outset round"><b>Outset</b></p>
+      </fieldset>
+  
+      <h2>E. Latihan CSS Position</h2>
+
+      <div class="container">
+        <p class="sticky">
+          Ini adalah contoh dari posisi sticky
+        </p>
+  
+  
+        <p class="static">
+          <b>Ini adalah contoh dari position static</b> <br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type
+          specimen book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was popularised in
+          the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+  
+  
+        <p class="relative">
+          <b>Ini adalah contoh dari position relative</b> <br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+  
+  
+        <p class="absolute">
+          <b>Ini adalah contoh dari position absolute</b> <br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+  
+  
+        <p class="fixed">
+          ini merupakan contoh dari position fixed
+        </p>
+      </div>
+
+      <h2>F. Latihan CSS Navigation Bar</h2>
+  
+      <div class="menu">
+        <ul class="horizontal">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Profil</a></li>
+          <li><a href="#">Kontak</a></li>
+          <li><a href="#">Layanan</a></li>
+        </ul>
+      </div>
+  
+  
+      <nav>
+        <ul class="vertical">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Profil</a></li>
+          <li><a href="#">Kontak</a></li>
+          <li><a href="#">Layanan</a></li>
+        </ul>
+      </nav>
+  
+      <h2>G. Latihan CSS Multiple Column</h2>
+
+      <div class="news">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's stah2ndard dummy text ever since the 1500s,
+        </p>
+  
+  
+        <p>
+          It is a long established fact that a reader will be distracted by the readable
+          content of a page when looking at its layout. The point of using Lorem Ipsum is
+          that it has a more-or-less normal distribution of letters, as opposed to using
+        </p>
+      </div>
+
+      <h2>H. Latihan CSS Image Gallery</h2>
+
+      <div class="box">
+        <img src="salmon - hefore.png">
+        <div class="Salmon">Soeharto</div>
+      </div>
+  
+  
+      <div class="box">
+        <img src="seafood - hefore.png">
+        <div class="Seafood">Baharuddin Jusuf Habibi</div>
+      </div>
+  
+  
+      <div class="box">
+        <img src="shrimp - hefore.png">
+        <div class="Shrimp">KH. Abdurrahman Wahid</div>
+      </div>
+  
+  
+      <div class="box">
+        <img src="slow cooker potatoes - hefore.png">
+        <div class="Potatoes">Susilo Bambang Yudhoyono</div>
+      </div>
+  
+  
+      <div class="box">
+        <img src="sweet potatoes - hefore.png">
+        <div class="Potatoes sweet">Ir. H. Joko Widodo</div>
+      </div>
+  
+      <h2>J. Latihan Konsep Grid</h2>
+
+      <h3>Grid 4</h3>
+    <div class="col-3 col-s-6 bg-red">
+      Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3
+    </div>
+    <div class="col-3 col-s-6 bg-blue">
+      Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3
+    </div>
+    <div class="col-3 col-s-6 bg-green">
+      Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3
+    </div>
+    <div class="col-3 col-s-6 bg-red">
+      Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3
+    </div>
+  <h3>Grid 3</h3>
+    <div class="col-4 bg-green">
+      Satu layar dibagi menjadi 3 bagian, tiap bagian berukuran 4
+    </div>
+    <div class="col-4 bg-red">
+      Satu layar dibagi menjadi 3 bagian, tiap bagian berukuran 4
+    </div>
+    <div class="col-4 bg-blue">
+      Satu layar dibagi menjadi 3 bagian, tiap bagian berukuran 4
+    </div>
+  <h3>Grid 2</h3>
+    <div class="col-6 bg-green">
+      Satu layar dibagi menjadi 2 bagian, tiap bagian berukuran 6
+    </div>
+    <div class="col-6 bg-red">
+      Satu layar dibagi menjadi 2 bagian, tiap bagian berukuran 6
+    </div>
+
+    <h2>K. Latihan Praktikum Responsive Article</h2>
+
+    <div class="article">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing
+        and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and
+      </p>
+      <p>
+        It is a long established fact that a reader will
+        be distracted by the readable content of a page
+        when looking at its layout. The point of using
+        Lorem Ipsum is that it has a more-or-less normal
+      </p>
+      <p>
+        Contrary to popular belief, Lorem Ipsum is not simply
+        random text. It has roots in a piece of classical
+        Latin literature from 45 BC, making it over 2000 years
+      </p>
+    </div>
+
+    <h2>L. Latihan Praktikum Responsisve Image Gallery</h2>
+
+    <div class="container">
+      <h3>Image Galery</h3>
+      <div class="box col-3 col-s-6">
+        <img src="soekarno - modul 3.jpg" class="image">
+        <h2>Soekarno</h2>
+        <p>
+          Soekarno adalah presiden RI yang pertama
+        </p>
+      </div>
+      <div class="box col-3 col-s-6">
+        <img src="soeharto - modul 3.jpeg" class="image">
+        <h2>Soeharto</h2>
+        <p>
+          Soeharto adalah presiden RI yang kedua 
+        </p>
+      </div>
+
+
+      <h2>M. Latihan Praktikum Responsive Template</h2>
+
+      <div class="container">
+        <!-- header mulai -->
+        <div class="col-12 header">
+        </div>
+        <!-- akhir header -->
+        <!-- awal menu -->
+        <div class="col-3 col-s-5 sidebar">
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Kontak Kami</a></li>
+          </ul>
+        </div>
+        <!-- akhir menu -->
+        <!-- awal konten -->
+        <div class="col-9 col-s-7 content">
+          <p>
+            It is a long established fact that a reader will be distracted
+            by the readable content of a page when looking at its layout.
+            The point of using Lorem Ipsum is that it has a more-or-less normal
+          </p>
+        </div>
+        <!-- akhir konten -->
+        <!-- awal footer -->
+        <div class="col-12 footer">
+          &copy; Copyright by Jack
+        </div>
+        <!-- akhir footer -->
+      </div>
+  
+
+      <h2>N. Latihan Praktikum Responsive Form</h2>
+
+      <div class="container">
+        <form>
+          <fieldset>
+            <legend>Registration Form</legend>
+            <div class="col-3 label">
+              First Name
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control">
+            </div>
+  
+  
+            <div class="col-3 label">
+              Last Name
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control">
+            </div>
+  
+  
+            <div class="col-3 label">
+              Date of Birth
+            </div>
+            <div class="col-9">
+              <input type="date" class="form-control">
+            </div>
+            <button type="button" class="button">
+              Register
+            </button>
+          </fieldset>
+        </form>
+      </div>
+  
+</body>
+</html>
